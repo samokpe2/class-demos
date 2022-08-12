@@ -15,8 +15,7 @@ class Person(db.Model):
   __tablename__ = 'persons'
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(), nullable=False)
-
-db.create_all()
+  age = db.Column(db.Integer, nullable=False)
 
 @app.route('/')
 def index():
